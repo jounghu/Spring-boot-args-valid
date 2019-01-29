@@ -95,7 +95,6 @@ public class ValidController {
 如上2步操作就可以完成参数校验:
 
 ![JSON方式校验](http://ww1.sinaimg.cn/large/005RZJcZgy1fznkixga6xj30i30n2mxt.jpg)
-
 可以看到如何`password`不传递，spring 已经帮我们做了参数校验，再来看看`表单方式`
 
 `表单方式`:
