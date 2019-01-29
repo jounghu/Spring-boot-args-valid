@@ -94,19 +94,21 @@ public class ValidController {
 
 如上2步操作就可以完成参数校验:
 
-![JSON方式校验](http://ww1.sinaimg.cn/large/005RZJcZgy1fznkixga6xj30i30n2mxt.jpg)
+![JSON方式参数校验](http://ww1.sinaimg.cn/large/005RZJcZgy1fznljhbiqhj30i30n2mxt.jpg)
+
 可以看到如何`password`不传递，spring 已经帮我们做了参数校验，再来看看`表单方式`
 
 `表单方式`:
 
 ```json
+
 @RestController
 @Validated<1>
 public class ValidController {
 
     @GetMapping("/get-args-valid")
-    public String getArgsValid(@NotNull(message = "用户名不能空")<2> String username, @NotNull(message = "密码不能为空") String password) {
-        return null;
+       public String getArgsValid(@NotNull(message = "用户名不能空")<2> String username, @NotNull(message = "密码不能为空") String password) {
+           return null;
     }
 
 }
